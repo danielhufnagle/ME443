@@ -16,13 +16,12 @@ int main()
     uint slice_num = pwm_gpio_to_slice_num(SERVO_PIN);
     
     // set PWM to 50 Hz
-    float div = 2500;
+    float div = 50; // must be between 0 and 255
     uint16_t wrap = 60000;
     pwm_set_clkdiv(slice_num, div);
     pwm_set_wrap(slice_num, wrap);
     pwm_set_enabled(slice_num, true);
-    pwm_set_gpio_level(SERVO_PIN, 900); // 1.5% duty cycle -> 0 degrees, 12% duty cycle -> 180 degrees
-    
+    pwm_set_gpio_level(SERVO_PIN, 0);    
 
     while (true) {
         for (int i = 0; i <= 180; i++) {
