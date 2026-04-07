@@ -3,7 +3,7 @@
 #include "hardware/pwm.h"
 
 #define SERVO_PIN 1
-#define SERVO_DELAY 2
+#define SERVO_DELAY 10 // use 10 for good smooth sweep (lower will cause servo to lag behind control too much, higher will cause steps to become too discrete)
 
 void set_angle(int angle);
 
