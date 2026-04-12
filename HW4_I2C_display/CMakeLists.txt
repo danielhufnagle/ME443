@@ -46,7 +46,7 @@ pico_enable_stdio_usb(HW4_I2C_display 1)
 
 # Add the standard library to the build
 target_link_libraries(HW4_I2C_display
-        pico_stdlib hardware_i2c)
+        pico_stdlib hardware_i2c hardware_adc)
 
 # Add the standard include files to the build
 target_include_directories(HW4_I2C_display PRIVATE
