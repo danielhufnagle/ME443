@@ -33,7 +33,7 @@ int main()
         adc_volts = 3.3 * (float)adc_val / 4095.0;
 
         // get framerate
-        curr_time_since_boot = to_us_since_boot();
+        curr_time_since_boot = to_us_since_boot(get_absolute_time());
         uint64_t time_since_last_frame = curr_time_since_boot - prev_time_since_boot;
         prev_time_since_boot = curr_time_since_boot;
         uint64_t fps = 1000000 / time_since_last_frame;
