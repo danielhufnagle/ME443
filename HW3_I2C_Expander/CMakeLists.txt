@@ -35,7 +35,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(HW3_I2C_Expander HW3_I2C_Expander.c )
+add_executable(HW3_I2C_Expander HW3_I2C_Expander.c MCP23008.h MCP23008.c)
 
 pico_set_program_name(HW3_I2C_Expander "HW3_I2C_Expander")
 pico_set_program_version(HW3_I2C_Expander "0.1")
