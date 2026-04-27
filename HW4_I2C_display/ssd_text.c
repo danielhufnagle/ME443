@@ -9,7 +9,7 @@ void draw_char(uint8_t x, uint8_t y, char c) {
 
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 8; j++) {
-            ssd1306_drawPixel(x + i, y + j, (ASCII[c][i] & (1 << j)) != 0);
+            ssd1306_drawPixel(x + i, y + j, (ASCII[c - 32][i] & (1 << j)) != 0);
         }
     }
     ssd1306_update();
